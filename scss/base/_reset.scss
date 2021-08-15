@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 
   @include respond(phone-small) {
     font-size: 57%;
