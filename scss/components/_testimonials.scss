@@ -1,0 +1,76 @@
+.testimonials__container {
+  position: relative;
+  width: 95%;
+  max-width: 60rem;
+  margin: 7rem auto 0 auto;
+  height: 40rem;
+  overflow: hidden;
+
+  .testimonial {
+    position: absolute;
+    color: $color-main-white;
+    transition: all 0.5s ease;
+
+    &__quotes {
+      font-size: 12rem;
+      position: absolute;
+      top: -3rem;
+      left: 0;
+    }
+
+    &__text {
+      color: inherit;
+      width: 80%;
+      margin: 6rem auto 0 auto;
+      line-height: 1.6;
+    }
+
+    &__customer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.4rem;
+
+      .customer-img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 100rem;
+        margin-right: 1.2rem;
+
+        & img {
+          border-radius: 100rem;
+        }
+      }
+
+      .customer-name {
+        font-size: 1.3rem;
+      }
+    }
+
+    &--2 {
+      transform: translateX(100%);
+    }
+
+    &--3 {
+      transform: translateX(200%);
+    }
+  }
+
+  .arrow-right,
+  .arrow-left {
+    font-size: 3rem;
+    color: ($color-primary-light);
+    position: absolute;
+    top: 30%;
+    cursor: pointer;
+    z-index: 99;
+  }
+
+  .arrow-left {
+    left: 0;
+  }
+
+  .arrow-right {
+    right: 1.1rem;
+  }
+}

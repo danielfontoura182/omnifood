@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.heading {
+  &--primary {
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+
+    @include respond(tablet-big) {
+      font-size: 4rem;
+    }
+  }
+
+  &--secondary {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    color: $color-text-grey-dark;
+    text-align: center;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include respond(tablet-big) {
+      font-size: 2.9rem;
+    }
+  }
+
+  &--tertiary {
+    font-size: 1.8rem;
+    color: $color-text-grey-dark;
+  }
+
+  &--quartenary {
+    font-size: 1.6rem;
+    color: $color-text-grey-dark;
+  }
+}

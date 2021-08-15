@@ -1,0 +1,41 @@
+.cities-container {
+  width: 95%;
+  max-width: 1270px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: all 2s ease;
+
+  @include respond(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+  }
+
+  .city {
+    margin-bottom: 3.1rem;
+
+    &-img-container {
+      margin-bottom: 1.7rem;
+    }
+
+    &__content {
+      &__text {
+        & * {
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.3rem;
+
+          &:first-child {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cities-container--active {
+  opacity: 1;
+}

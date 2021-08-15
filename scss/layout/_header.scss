@@ -1,0 +1,147 @@
+.header {
+  height: 100vh;
+  background: linear-gradient(
+      rgba($color-main-black, 0.85),
+      rgba($color-main-black, 0.85)
+    ),
+    url('../img/hero.jpg') no-repeat center/cover;
+  position: relative;
+  background-attachment: fixed;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1470px;
+    margin: 0 auto;
+    padding: 1.7rem 3rem;
+    color: $color-main-white;
+
+    @include respond(tablet) {
+      padding: 3rem 4rem;
+    }
+
+    &__links-container--flex {
+      display: none;
+
+      @include respond(tablet-big) {
+        display: block;
+      }
+
+      .nav__links--flex {
+        @include respond(tablet-big) {
+          display: flex;
+        }
+
+        li:not(:last-child) {
+          margin-right: 5rem;
+        }
+
+        li {
+          a {
+            font-size: 1.9rem;
+            color: $color-main-white;
+            letter-spacing: 0.1rem;
+            padding: 0.5rem;
+            transition: all 0.3s;
+
+            &:hover {
+              color: $color-primary-light;
+              border-bottom: 2px solid $color-primary;
+            }
+          }
+        }
+      }
+    }
+
+    .logo {
+      width: 10rem;
+    }
+
+    &__links-container {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: $color-bg-footer;
+      z-index: 99;
+      transform: translateY(-101vh);
+      transition: all 1s;
+    }
+
+    .close-nav {
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+      color: crimson;
+    }
+
+    &__links {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-200%, -50%);
+      opacity: 0;
+      text-align: center;
+      transition: all 2.2s;
+
+      li:not(:last-child) {
+        margin-bottom: 6rem;
+      }
+
+      li {
+        a {
+          font-size: 3rem;
+          letter-spacing: 0.1rem;
+          color: $color-primary;
+          font-weight: 900;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $color-primary-light;
+          }
+        }
+      }
+    }
+
+    .open-nav,
+    .close-nav {
+      font-size: 3rem;
+      cursor: pointer;
+
+      @include respond(tablet-big) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    color: white;
+    width: 92%;
+    max-width: 1270px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__buttons {
+    a:last-child {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    rgba($color-main-black, 0.85),
+    rgba($color-main-black, 0.85)
+  );
+  z-index: 9000;
+}

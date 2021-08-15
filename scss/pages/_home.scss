@@ -1,0 +1,74 @@
+.about {
+  &__text {
+    color: $color-text-grey;
+    width: 90%;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: $default-font-size;
+
+    @include respond(tablet) {
+      text-align: center;
+    }
+  }
+
+  &__skills-container {
+    width: 90%;
+    max-width: 118rem;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 3s ease;
+
+    @include respond(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 4rem;
+      text-align: center;
+    }
+
+    @include respond(desktop) {
+      grid-template-columns: repeat(4, 1fr);
+      width: 95%;
+    }
+
+    .skill {
+      &__icon {
+        font-size: 5rem;
+        color: $color-primary;
+      }
+
+      &__text {
+        font-size: 1.35rem;
+      }
+    }
+  }
+}
+
+.skills-active {
+  opacity: 1;
+}
+
+.how-it-works {
+  background: $color-bg;
+}
+
+.testimonials {
+  background: linear-gradient(
+      rgba($color-main-black, 0.85),
+      rgba($color-main-black, 0.85)
+    ),
+    url('../img/back-customers.jpg') no-repeat center/cover;
+  background-attachment: fixed;
+
+  &__title {
+    color: $color-main-white;
+  }
+}
+
+.plans {
+  background: $color-bg;
+}
+
+.footer {
+  background: $color-bg-footer;
+}

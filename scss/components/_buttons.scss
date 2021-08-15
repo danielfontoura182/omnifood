@@ -1,0 +1,40 @@
+.btn {
+  border: 2px solid $color-primary;
+  color: $color-primary;
+  padding: 1.3rem 3rem;
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  @include respond(phone-small) {
+    padding: 1.3rem 2.5rem;
+  }
+
+  &:hover {
+    background: $color-primary;
+    color: $color-main-white;
+  }
+
+  &--orange,
+  &--premium {
+    color: $color-main-white;
+    background: $color-primary;
+
+    &:hover {
+      background: transparent;
+      color: $color-primary;
+    }
+  }
+
+  &--sign {
+    border: 1.8px solid $color-primary;
+  }
+
+  &--submit {
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 auto;
+  }
+}

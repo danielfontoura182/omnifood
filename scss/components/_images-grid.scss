@@ -1,0 +1,24 @@
+.images-grid__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include respond(tablet-big) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-img-container {
+    background: $color-main-black;
+    overflow: hidden;
+
+    .grid-img {
+      opacity: 0.6;
+      transition: all 0.5s;
+      transform: scale(1.15);
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.03);
+      }
+    }
+  }
+}
