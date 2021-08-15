@@ -58,8 +58,9 @@
 
   .arrow-right,
   .arrow-left {
-    font-size: 3rem;
-    color: ($color-primary-light);
+    height: 3rem;
+    width: 3rem;
+    fill: ($color-primary-light);
     position: absolute;
     top: 30%;
     cursor: pointer;

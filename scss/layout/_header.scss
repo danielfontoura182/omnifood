@@ -74,7 +74,7 @@
       position: absolute;
       top: 3rem;
       right: 3rem;
-      color: crimson;
+      fill: crimson;
     }
 
     &__links {
@@ -105,9 +105,14 @@
       }
     }
 
+    .open-nav {
+      fill: $color-main-white;
+    }
+
     .open-nav,
     .close-nav {
-      font-size: 3rem;
+      height: 6rem;
+      width: 6rem;
       cursor: pointer;
 
       @include respond(tablet-big) {
